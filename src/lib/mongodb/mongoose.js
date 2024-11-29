@@ -21,8 +21,6 @@ export const connect = async () => {
         // Attempt to connect to MongoDB with specified options.
         await mongoose.connect(MONGODB_URI, {
             dbName: 'next-blog', // Specify the database name to use.
-            useNewUrlParser: true, // Use the new URL parser for MongoDB connections.
-            useUnifiedTopology: true, // Enable the unified topology engine for better connection management.
         });
 
         console.log('Connected to MongoDB'); // Log a success message if the connection is established.
