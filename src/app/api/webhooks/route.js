@@ -1,7 +1,7 @@
 import { Webhook } from 'svix'
 import { headers } from 'next/headers'
 
-export async function POST(req) {
+export async function POST(request) {
   const SIGNING_SECRET = process.env.SIGNING_SECRET
 
   if (!SIGNING_SECRET) {
@@ -25,7 +25,7 @@ export async function POST(req) {
   }
 
   // Get body
-  const payload = await req.json()
+  const payload = await request.json()
   const body = JSON.stringify(payload)
 
   let evt
