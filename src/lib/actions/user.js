@@ -1,4 +1,4 @@
-import User from '../models/user';
+import User from '../models/user.model';
 import { connect } from '../mongodb/mongoose';
 
 // Finds a user with the specified clerkId and updates their data. If no user is found, it creates a new one.
